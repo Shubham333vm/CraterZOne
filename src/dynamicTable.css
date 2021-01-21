@@ -1,0 +1,22 @@
+.table-head{
+    background-color: #c0e218;
+    /* right: 80%;
+    position: absolute; */
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding-left: 8px;
+    padding-right: 21px;
+    border: 1px solid;
+}
+
+.table-data{
+    background-color: #96bb7c;
+}
+
+.table-input{
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: azure;
+
+}

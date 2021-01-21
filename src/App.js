@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import React, { useState } from "react";
+import DynamicTable from "./DynamicTable";
+import MapContainer from "./MapContainer";
 
 function App() {
+  const [dynamicTable, setdynamicTable] = useState([<DynamicTable />]);
+
+  function addDynamicTables(){
+    setdynamicTable([...dynamicTable,<DynamicTable />])
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+     {/* <MapContainer/> */}
+      <button onClick={addDynamicTables}>Add Table </button> 
+       {dynamicTable.map((table)=> {return table})} 
     </div>
   );
 }
